@@ -1,0 +1,93 @@
+@import "mixin";
+
+.carousel-wrapper {
+    width: 100%;
+    height: 600px;
+}
+
+@include carouselCells;
+
+.flickity-page-dots {
+    bottom: 10px;
+}
+
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+
+
+.flickity-page-dots .dot.selected {
+    background: white;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 600px;
+    margin-right: 10px;
+    background-position-y: 65%;
+    background-position-x: 20%;
+}
+
+.progress-bar {
+    height: 20px;
+    background: black;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+    p {
+        color: white;
+        display: block;
+        padding: 40px 20px;
+        position: absolute;
+        font-size: 30px;
+        margin: auto;
+        text-align: center;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(128, 128, 128, 0.5);
+    }
+}
+
+.button {
+    position: absolute;
+    z-index: 1000;
+
+    .btn {
+        z-index: 1000;
+        background: rgba(128, 128, 128, 0.5);
+        color: white;
+    }
+}
+
+
+
+@media(max-width: 767px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+
+        p {
+            color: white;
+            display: block;
+            word-wrap: break-word;
+            white-space: wrap;
+            padding: 5px 30px;
+            position: absolute;
+            font-size: 20px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.5);
+            border-radius: 0;
+            width: 80%;
+            overflow: hidden;
+            margin-top: 20vh;
+        }
+    }
+}
