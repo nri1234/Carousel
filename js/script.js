@@ -14,13 +14,6 @@ flkty.on('scroll', function (progress) {
 });
 
 
-var flkty = new Flickity('.main-carousel', {
-
-});
-
-
-
-
 btnStart.addEventListener('click', function (event) {
 
     if (!matchesSelector(event.target, '.btn')) {
