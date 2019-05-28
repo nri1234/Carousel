@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <div class="carousel-wrapper">
         <div class="button">
             <button class="btn" data-selector=".carousel-cell-1">Start</button>
@@ -20,9 +21,10 @@
     </div>
 
     <script id="carousel-item" type="text/x-tmpl-mustache">
-        <div class="carousel-cell carousel-cell-{{ number }}" style="background-image:url({{ image }})">
+        <div class="carousel-cell carousel-cell-{{ number }}"
+        style="background-image:url({{ image }})">
           <div class="container">
-              <h1> {{ title }} </h1>
+              <h2> "{{ title }}" </h2>
               {{{ description }}}
           </div>
         </div>
@@ -60,10 +62,10 @@
             }
         ];
     </script>
-    <script src="/vendor/flickity.pkgd.min.js"></script>
-    <script src="/vendor/mustache.js"></script>
-    <script src="/js/mustache.js"></script>
-    <script src="/js/script.js"></script>
+    <script type="text/javascript" src="/vendor/flickity.pkgd.min.js"></script>
+    <script type="text/javascript" src="/vendor/mustache.js"></script>
+    <script type="text/javascript" src="/js/mustache.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
 </body>
 
 </html>

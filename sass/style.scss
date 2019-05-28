@@ -90,4 +90,9 @@
             margin-top: 20vh;
         }
     }
+
+    [class^=".carousel-cell-"] .container p {
+        top: unset;
+        bottom: unset;
+    }
 }

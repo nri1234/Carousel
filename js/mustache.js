@@ -1,3 +1,4 @@
+'use strict';
 (function () {
     var carouselItem = document.getElementById('carousel-item').innerHTML;
 
@@ -5,9 +6,10 @@
 
     ////
 
-    var listItems = '';
+    var listItems = ' ';
 
     for (var i = 0; i < slidesData.length; i++) {
+        console.log(slidesData);
         listItems += Mustache.render(carouselItem, slidesData[i]);
     };
 
