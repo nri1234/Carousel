@@ -21,16 +21,20 @@
     </div>
 
     <script id="carousel-item" type="text/x-tmpl-mustache">
+
         <div class="carousel-cell carousel-cell-{{ number }}"
-        style="background-image:url({{ image }})">
-          <div class="container">
-              <h2> "{{ title }}" </h2>
-              {{{ description }}}
-          </div>
-        </div>
+            style="background-image:url({{ image }})">
+              <div class="container">
+                  <h2> "{{ title }}" </h2>
+                  {{{ description }}}
+              </div>
+            </div>
     </script>
+
     <script>
-        var slidesData = [{
+        var slidesData = [
+
+            {
                 number: 1,
                 image: '/images/pict-1.jpg',
                 title: 'Toronto',
@@ -61,11 +65,14 @@
                 description: '<p>My next holidays</p>'
             }
         ];
+
     </script>
-    <script type="text/javascript" src="/vendor/flickity.pkgd.min.js"></script>
-    <script type="text/javascript" src="/vendor/mustache.js"></script>
-    <script type="text/javascript" src="/js/mustache.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
+
+
+    <script src="/vendor/flickity.pkgd.min.js"></script>
+    <script src="/vendor/mustache.js"></script>
+    <script src="/js/mustach.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
