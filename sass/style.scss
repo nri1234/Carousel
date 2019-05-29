@@ -2,7 +2,7 @@
 
 .carousel-wrapper {
     width: 100%;
-    height: 600px;
+    height: 800px;
 }
 
 @include carouselCells;
@@ -20,7 +20,7 @@
 }
 
 
-.flickity-page-dots .dot.selected {
+.flickity-page-dots .dot.is-selected {
     background: white;
 }
 
@@ -66,7 +66,10 @@
     }
 }
 
-
+h2 {
+    color: white;
+    font-weight: 600;
+}
 
 @media(max-width: 767px) {
     .container {
@@ -76,12 +79,10 @@
         p {
             color: white;
             display: block;
-            word-wrap: break-word;
-            white-space: wrap;
             padding: 5px 30px;
             position: absolute;
             font-size: 20px;
-            margin: 0 auto;
+            margin: 40px auto;
             text-align: center;
             background-color: rgba(128, 128, 128, 0.5);
             border-radius: 0;
@@ -89,10 +90,5 @@
             overflow: hidden;
             margin-top: 20vh;
         }
-    }
-
-    [class^=".carousel-cell-"] .container p {
-        top: unset;
-        bottom: unset;
     }
 }
