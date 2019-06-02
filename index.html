@@ -38,43 +38,69 @@
         var slidesData = [
 
             {
-                number: 1,
+                number: "1",
                 image: '/images/pict-1.jpg',
                 title: 'Toronto',
-                description: '<p>Multi culture place</p>'
+                description: '<p>Multi culture place</p>',
+                coords: {
+                    lat: 43.698054,
+                    lng: -79.429338
+                }
+
             },
             {
-                number: 2,
+                number: "2",
                 image: '/images/pict-2.jpg',
                 title: 'Scotland',
-                description: '<p>Montains, lakes and...more lakes</p>'
+                description: '<p>Montains, lakes and...more lakes</p>',
+                coords: {
+                    lat: 58.406330,
+                    lng: -4.991754
+                }
             },
             {
-                number: 3,
+                number: "3",
                 image: '/images/pict-3.jpg',
                 title: 'Bretania',
-                description: '<p>Lovely food and the Ocean</p>'
+                description: '<p>Lovely food and the Ocean</p>',
+                coords: {
+                    lat: 48.041245,
+                    lng: -4.735953
+                }
+
             },
             {
-                number: 4,
+                number: "4",
                 image: '/images/pict-4.jpg',
                 title: 'Widzew Lodz',
-                description: '<p>My love</p>'
+                description: '<p>My love</p>',
+                coords: {
+                    lat: 51.764349,
+                    lng: 19.511519
+                }
             },
             {
-                number: 5,
+                number: "5",
                 image: '/images/pict-5.jpg',
                 title: 'New Zeland',
-                description: '<p>My next holidays</p>'
+                description: '<p>My next holidays</p>',
+                coords: {
+                    lat: -44.645820,
+                    lng: 167.888924
+                }
             }
         ];
     </script>
-
-
+    <div id="map-wrapper">
+        <h3>My places</h3>
+        <div id="map"></div>
+    </div>
     <script src="/vendor/flickity.pkgd.min.js"></script>
     <script src="/vendor/mustache.js"></script>
     <script src="/js/mustach.js"></script>
     <script src="/js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeHW0mwst7jfb8VyZNmC7kTpdqzp2HHkA&callback=initMap"></script>
+    <script src="/js/maps.js"></script>
 </body>
 
 </html>
