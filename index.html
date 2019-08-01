@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+<head>
     <meta charset="UTF-8">
     <title>Carousel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,41 +11,97 @@
 </head>
 
 <body>
+
     <div class="carousel-wrapper">
         <div class="button">
-            <button class="btn" data-selector=".carousel-cell-1">Start</button>
+            <button class="btn" data-selector=".carousel-cell-1">
+                Start
+            </button>
         </div>
-        <div class="main-carousel">
-            <div class="carousel-cell carousel-cell-1" id="carousel-cell-1">
-                <div class="container">
-                    <p>Toronto</p>
-                </div>
-            </div>
-
-            <div class="carousel-cell carousel-cell-2" id="carousel-cell-2">
-                <div class="container">
-                    <p>Scotland</p>
-                </div>
-            </div>
-            <div class="carousel-cell carousel-cell-3" id="carousel-cell-3">
-                <div class="container">
-                    <p>Bretania</p>
-                </div>
-            </div>
-            <div class="carousel-cell carousel-cell-4" id="carousel-cell-4">
-                <div class="container">
-                    <p>My love</p>
-                </div>
-            </div>
-            <div class="carousel-cell carousel-cell-5" id="carousel-cell-5">
-                <div class="container">
-                    <p>Some other beautiful place</p>
-                </div>
-            </div>
+        <div id="results" class="main-carousel">
         </div>
         <div class="progress-bar"></div>
     </div>
+
+    <script id="carousel-item" type="text/x-tmpl-mustache">
+
+        <div class="carousel-cell carousel-cell-{{ number }}"
+            style="background-image:url({{ image }})">
+              <div class="container">
+                  <h2> {{ title }} </h2>
+                  {{{ description }}}
+              </div>
+            </div>
+    </script>
+
+    <script>
+        var slidesData = [
+
+            {
+                number: "1",
+                image: '/images/pict-1.jpg',
+                title: 'Toronto',
+                description: '<p>Multi culture place</p>',
+                coords: {
+                    lat: 43.698054,
+                    lng: -79.429338
+                }
+
+            },
+            {
+                number: "2",
+                image: '/images/pict-2.jpg',
+                title: 'Scotland',
+                description: '<p>Montains, lakes and...more lakes</p>',
+                coords: {
+                    lat: 58.406330,
+                    lng: -4.991754
+                }
+            },
+            {
+                number: "3",
+                image: '/images/pict-3.jpg',
+                title: 'Bretania',
+                description: '<p>Lovely food and the Ocean</p>',
+                coords: {
+                    lat: 48.041245,
+                    lng: -4.735953
+                }
+
+            },
+            {
+                number: "4",
+                image: '/images/pict-4.jpg',
+                title: 'Widzew Lodz',
+                description: '<p>My love</p>',
+                coords: {
+                    lat: 51.764349,
+                    lng: 19.511519
+                }
+            },
+            {
+                number: "5",
+                image: '/images/pict-5.jpg',
+                title: 'New Zeland',
+                description: '<p>My next holidays</p>',
+                coords: {
+                    lat: -44.645820,
+                    lng: 167.888924
+                }
+            }
+        ];
+
+    </script>
+    <div id="map-wrapper">
+        <h3>My places</h3>
+        <div id="map"></div>
+    </div>
     <script src="/vendor/flickity.pkgd.min.js"></script>
+    <script src="/vendor/mustache.js"></script>
     <script src="/js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeHW0mwst7jfb8VyZNmC7kTpdqzp2HHkA&callback=initMap"></script>
+
 </body>
+
 </html>
+
